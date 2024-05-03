@@ -18,5 +18,10 @@ from django.urls import path
 from blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home)
+    path('',views.home),
+    path('about',views.about),
+    path('contact',views.contact),
+    path('login',views.login),
+    path('signup',views.signup),
+    path('dashboard',views.dashboard),
 ]
