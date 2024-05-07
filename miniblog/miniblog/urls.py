@@ -18,10 +18,14 @@ from django.urls import path
 from blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home),
-    path('about',views.about),
-    path('contact',views.contact),
-    path('login',views.login),
-    path('signup',views.signup),
-    path('dashboard',views.dashboard),
+    path('',views.home,name='home'),
+    path('about/',views.about,name='about'),
+    path('contact/',views.contact,name='contact'),
+    path('login/',views.user_login,name='login'),
+    path('logout/',views.user_logout,name='logout'),
+    path('signup/',views.user_signup,name='signup'),
+    path('dashboard/',views.dashboard,name='dashboard'),
+    path('addpost/',views.add_post,name='addpost'),
+    path('edit/<int:id>/',views.edit,name='edit'),
+    path('delete/<int:id>/',views.delete,name='delete'),
 ]
